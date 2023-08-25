@@ -11,7 +11,7 @@ class Xeol < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/xeol-io/xeol/releases/download/v0.7.0/xeol_0.7.0_darwin_amd64.tar.gz"
-      sha256 "5cd61cc814751d325b743a90eaf69aeeedf84d761d4f151044d2c4d96dfdba70"
+      sha256 "16bbe6cb6a4df57fd345087c16b1dc133aebe4a1fc6e2995c52487d399a3cae8"
 
       def install
         bin.install "xeol"
@@ -19,7 +19,7 @@ class Xeol < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/xeol-io/xeol/releases/download/v0.7.0/xeol_0.7.0_darwin_arm64.tar.gz"
-      sha256 "4b21a8a186f5e985c54701b04d0f7e6cd618f6e68e23793a15d161ef52f9b514"
+      sha256 "6177fe73c1b4bb0a6f484f47e0681bc684c03c2b2524729e12ef516af17ea003"
 
       def install
         bin.install "xeol"
@@ -30,7 +30,7 @@ class Xeol < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/xeol-io/xeol/releases/download/v0.7.0/xeol_0.7.0_linux_arm64.tar.gz"
-      sha256 "1d9a64ecbf21e8025b6b6aab17e9902a8d53325ac53a9cee58484554395acf27"
+      sha256 "1b06a4c49fc140c4feb17e3e35f587ad8f62d4f81bc046b0e50643ce89648d85"
 
       def install
         bin.install "xeol"
@@ -38,7 +38,7 @@ class Xeol < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/xeol-io/xeol/releases/download/v0.7.0/xeol_0.7.0_linux_amd64.tar.gz"
-      sha256 "e535ac3a29200d9b22dedb14a34bbf0c1071d7d712f9685dc307fe7d0b3754da"
+      sha256 "6635326260ef2c0b88d4b78aba65631007e98c6127ec1ee8914cd42ea03be5ea"
 
       def install
         bin.install "xeol"
