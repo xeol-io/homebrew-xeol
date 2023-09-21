@@ -5,21 +5,21 @@
 class Xeol < Formula
   desc "A scanner for end-of-life (EOL) software in container images, filesystems, and SBOMs"
   homepage "https://github.com/xeol-io/xeol"
-  version "0.8.1"
+  version "0.9.0"
   license "Apache License 2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/xeol-io/xeol/releases/download/v0.8.1/xeol_0.8.1_darwin_arm64.tar.gz"
-      sha256 "cfcafe76ac5491f6e776fd63c858539d16de9802eacb8b1183846cb7d191fdda"
+    if Hardware::CPU.intel?
+      url "https://github.com/xeol-io/xeol/releases/download/v0.9.0/xeol_0.9.0_darwin_amd64.tar.gz"
+      sha256 "f38982b0f48b3bff37119b248fc32035db0207da496065fb55b55d79d1aa683e"
 
       def install
         bin.install "xeol"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/xeol-io/xeol/releases/download/v0.8.1/xeol_0.8.1_darwin_amd64.tar.gz"
-      sha256 "b86b4d03cccba002d7a111d40d5ff159082518a17cc0182d7e8b9e4cb681d6df"
+    if Hardware::CPU.arm?
+      url "https://github.com/xeol-io/xeol/releases/download/v0.9.0/xeol_0.9.0_darwin_arm64.tar.gz"
+      sha256 "9c6ba82dc4e8f7f4a1c29d0f7726175dd18c82f766d65971b235d3ce081d5ddb"
 
       def install
         bin.install "xeol"
@@ -28,17 +28,17 @@ class Xeol < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xeol-io/xeol/releases/download/v0.8.1/xeol_0.8.1_linux_arm64.tar.gz"
-      sha256 "bfb906560c6b7b9a5ceff789f4083b9d197dc042a129ee5ae3b4abda8b847197"
+    if Hardware::CPU.intel?
+      url "https://github.com/xeol-io/xeol/releases/download/v0.9.0/xeol_0.9.0_linux_amd64.tar.gz"
+      sha256 "87eac18c8cf30b3d0dad9c0da472e4ff75b0060e1daae38a404657a961dc4707"
 
       def install
         bin.install "xeol"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/xeol-io/xeol/releases/download/v0.8.1/xeol_0.8.1_linux_amd64.tar.gz"
-      sha256 "326d10091ac40d203fc236450b04d5aef859eaf829504cda6e3eed25896d1e5f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/xeol-io/xeol/releases/download/v0.9.0/xeol_0.9.0_linux_arm64.tar.gz"
+      sha256 "617f6de76142a192e3e82b1f4962f25ee4ec798e1e0feff80a587c342405d8c1"
 
       def install
         bin.install "xeol"
