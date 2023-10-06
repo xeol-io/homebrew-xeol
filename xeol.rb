@@ -5,21 +5,21 @@
 class Xeol < Formula
   desc "A scanner for end-of-life (EOL) software in container images, filesystems, and SBOMs"
   homepage "https://github.com/xeol-io/xeol"
-  version "0.9.2"
+  version "0.9.3"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/xeol-io/xeol/releases/download/v0.9.2/xeol_0.9.2_darwin_amd64.tar.gz"
-      sha256 "ec1121396e3a5883703cdd98810032237e2517cfd566b27284e2f2876949c6dc"
+      url "https://github.com/xeol-io/xeol/releases/download/v0.9.3/xeol_0.9.3_darwin_amd64.tar.gz"
+      sha256 "99d2abab697e2217119d4e130f66d27e5a9856e4930eebbd86d940b0d7b13af6"
 
       def install
         bin.install "xeol"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/xeol-io/xeol/releases/download/v0.9.2/xeol_0.9.2_darwin_arm64.tar.gz"
-      sha256 "4986e1103124153207d48e5f0c4835f416261d8ff4d4a6acb528c2018e1c25bd"
+      url "https://github.com/xeol-io/xeol/releases/download/v0.9.3/xeol_0.9.3_darwin_arm64.tar.gz"
+      sha256 "0c81f3a9ddec8997ed67c4dc70e8e631f7f43e57f9a0c8ff88f8e7818f3e7206"
 
       def install
         bin.install "xeol"
@@ -29,16 +29,16 @@ class Xeol < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xeol-io/xeol/releases/download/v0.9.2/xeol_0.9.2_linux_arm64.tar.gz"
-      sha256 "7f91fc3fce7b38cbe283c3048c7a7d77a19d99ef13cf2be7e2703c7c60e177b4"
+      url "https://github.com/xeol-io/xeol/releases/download/v0.9.3/xeol_0.9.3_linux_arm64.tar.gz"
+      sha256 "aa1bcd7e0172e8c524df1b9ad03af3c604b40b95b692b06c20d092b1371229d4"
 
       def install
         bin.install "xeol"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/xeol-io/xeol/releases/download/v0.9.2/xeol_0.9.2_linux_amd64.tar.gz"
-      sha256 "0188a0681330662eab1a827ca829d4f54d449fa3e10c402f3a0c626e2d03e093"
+      url "https://github.com/xeol-io/xeol/releases/download/v0.9.3/xeol_0.9.3_linux_amd64.tar.gz"
+      sha256 "5bca80eabb2cf4752884b8612907d5d2c2946e56353ffdd88f968b76b0e0b27a"
 
       def install
         bin.install "xeol"
